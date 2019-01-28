@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brand Search</title>
+    <link rel="stylesheet" th:href="@{/style.css}">
+</head>
+<body>
+<h2>TopK Brands Found</h2>
+<div th:unless="${#lists.isEmpty(brands)}">
+    <dl th:each="brand : ${brands}">
+        <dt class="brandHeadline">
+            <span th:text="${brand.name}">Name</span> by
+            <span th:text="${brand.score}">Score</span>
+        </dt>
+    </dl>
+</div>
+<div th:if="${#lists.isEmpty(brands)}">
+    <p>No brands found</p>
+</div>
+<hr/>
+<h3>Add a brand</h3>
+<form method="POST">
+    <label for="name">Name:</label>
+    <input type="text" name="name" size="50"><br/>
+    <input type="submit">
+</form>
+</body>
+</html>
