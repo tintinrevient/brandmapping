@@ -42,7 +42,7 @@ For example, when the searched keyword is Chemical, a counter map will be create
 
 To compute the matching rate between "Chemical" and "Dow Chemical", the equation is as below:
 
-Matching rate = rate1*0.8 + rate2*0.2;
+Matching rate = rate1 x 0.8 + rate2 x 0.2;
 
 rate1 = Counts / Brand's string length - q + 1; (default q-gram is set as q = 3)
 
